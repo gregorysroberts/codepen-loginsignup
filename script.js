@@ -31,6 +31,17 @@ Reponse Objects:
 
 $('document').ready(function() {
 
-	//put code here
+	$('.signup-form').hide();
+
+	//Bring up signup element when signup is clicked, hide login
+	$('.signup-form-btn').on('click', function(){
+		$('.login-form').hide();
+		$('.signup-form').show();
+	});
+
+	$('.login-form-btn').on('click', function(){
+		$('.signup-form').hide();
+		$('.login-form').show();
+	});
 
 });
