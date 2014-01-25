@@ -64,9 +64,15 @@ $('document').ready(function() {
 	});
 
 
-	//Show success or failure depending on what the user submited
+	$('.btn-signup').on('click', function(){
+		var signupUser = {};
+		signupUser.name = $('#signup-name-field').val();
+		signupUser.email = $('#signup-email-field').val();
+		signupUser.username = $('#signup-username-field').val();
+		signupUser.password = $('#signup-password-field').val();
 
+		console.log(codepen.api.signup(signupUser));
+	});
 
-	//If it is a failure, show why
 
 });
